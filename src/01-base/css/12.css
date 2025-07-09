@@ -1,0 +1,31 @@
+/**
+ * @Author: ater
+ * @Date:   2025-07-09 11:13:23
+ * @Last Modified by:   ater
+ * @Last Modified time: 2025-07-09 11:26:35
+ */
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ul li{
+    list-style-type: none;
+}
+ul{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border-top:solid 1px #ccc ;
+}
+li{
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+    background-color: #ececec;
+}
+.active{
+    background-color: red;
+    color: white;
+}

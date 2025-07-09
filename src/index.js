@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+/**
+ * @Author: ater
+ * @Date:   2025-07-08 10:52:25
+ * @Last Modified by:   ater
+ * @Last Modified time: 2025-07-09 11:19:29
+ */
+import React from "react";
+import ReactDOM from "react-dom/client";
+// import App from "./01-base/01-classComponent";
+// import App from "./01-base/02-funcComponent";
+// import App from "./01-base/03-组件的嵌套";
+// import App from "./01-base/04-组件的样式";
+// import App from "./01-base/05-事件绑定";
+import App from "./01-base/12-卖座选项卡";
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<App />)

@@ -1,0 +1,11 @@
+/**
+ * @Author: ater
+ * @Date:   2025-07-08 14:27:05
+ * @Last Modified by:   ater
+ * @Last Modified time: 2025-07-08 14:28:57
+ */
+.active {
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+}
