@@ -30,15 +30,15 @@ export default class App extends Component {
     let cards = (index)=>{
         switch(index){
             case 0:
-                return <div className="card">电影</div>
+                return <div className="card">电影-card</div>
             case 1:
-                return <div className="card">影院</div>
+                return <div className="card">影院-card</div>
             case 2:
-                return <div className="card">商城</div>
+                return <div className="card">商城-card</div>
             case 3:
-                return <div className="card">我的</div>
+                return <div className="card">我的-card</div>
                 default:
-                return <div className="card">电影</div>
+                return <div className="card">电影-card</div>
         }
     }
     return <div className="box">
