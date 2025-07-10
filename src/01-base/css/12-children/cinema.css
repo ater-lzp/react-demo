@@ -1,0 +1,13 @@
+.CinemaItem {
+  background-color: antiquewhite;
+  box-shadow:  0 0 1px 1px rgb(255, 255, 255);
+  display: flex;
+}
+.CinemaItem>.left{
+    flex: 7;
+    text-align: start;
+}
+.CinemaItem>.right{
+    flex: 3;
+    text-align: center;
+}

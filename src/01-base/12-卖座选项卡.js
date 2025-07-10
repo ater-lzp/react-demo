@@ -7,6 +7,9 @@
 "use strict";
 import React, { Component } from "react";
 import "./css/12.css";
+import Center from "./component/Center";
+import Cinema from "./component/Cinema";
+import Film from "./component/Film";
 export default class App extends Component {
   state = {
     tabbars: [
@@ -30,20 +33,20 @@ export default class App extends Component {
     let cards = (index)=>{
         switch(index){
             case 0:
-                return <div className="card">电影</div>
+                return <Film className="card"></Film>
             case 1:
-                return <div className="card">影院</div>
+                return <Cinema className="card"></Cinema>
             case 2:
                 return <div className="card">商城</div>
             case 3:
-                return <div className="card">我的</div>
+                return <Center className="card"></Center>
                 default:
-                return <div className="card">电影</div>
+                return <Film className="card"></Film>
         }
     }
     return <div className="box">
        {cards(this.state.currentIndex)}
-        <ul>{tabs}</ul>
+        <ul className="tabbar">{tabs}</ul>
     </div>;
   }
 }

@@ -11,7 +11,7 @@
 ul li{
     list-style-type: none;
 }
-ul{
+.tabbar{
     display: flex;
     position: fixed;
     bottom: 0;
@@ -19,13 +19,13 @@ ul{
     height: 50px;
     border-top:solid 1px #ccc ;
 }
-li{
+.tabbar>li{
     flex: 1;
     text-align: center;
     line-height: 50px;
     background-color: #ececec;
 }
 .active{
-    background-color: red;
+    background-color: red !important;
     color: white;
 }
