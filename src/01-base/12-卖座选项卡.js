@@ -37,7 +37,7 @@ export default class App extends Component {
             case 1:
                 return <Cinema className="card"></Cinema>
             case 2:
-                return <div className="card">商城</div>
+                return <div className="card">商城-card</div>
             case 3:
                 return <Center className="card"></Center>
                 default:
