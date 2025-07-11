@@ -11,6 +11,7 @@ import ReactDOM from "react-dom/client";
 // import App from "./01-base/03-组件的嵌套";
 // import App from "./01-base/04-组件的样式";
 // import App from "./01-base/05-事件绑定";
-import App from "./01-base/12-卖座选项卡";
+// import App from "./01-base/12-卖座选项卡";
+import App from "./01-base/16-props/defineProps";
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<App />)
