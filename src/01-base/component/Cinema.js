@@ -1,3 +1,10 @@
+/**
+ * @Author: ater
+ * @Date:   2025-07-10 10:46:50
+ * @Last Modified by:   ater
+ * @Last Modified time: 2025-07-14 16:15:01
+ * desc: 使用受控组件
+ */
 import React, { Component } from "react";
 import { request } from "../../tools/request";
 import  "../css/12-children/cinema.css";
@@ -5,9 +12,9 @@ export default class Cinema extends Component {
   state = {
     cinemaList: [],
     input_ref: React.createRef(),
+    keyWord:""
   };
-  constructor(props) {
-    super(props);
+  componentDidMount=()=>{
     this.getCinemaList()
   }
   getCinemaList =  ()=>{
@@ -22,20 +29,16 @@ export default class Cinema extends Component {
        console.log(err);
      });
   }
-  handleChange = (keyWord)=>{
-    console.log('a');
-    
+  handleChange = (event)=>{    
 this.setState({
-    cinemaList : [...this.state.cinemaList.filter(x=>(x.name.toUpperCase()).includes(keyWord.toUpperCase()))]
+  [event.target.name]:event.target.value
 })
-
-if (keyWord==="") 
-    this.getCinemaList()
-
-
   }
+fillterCinemaList = (keyWord)=>{
+ return this.state.cinemaList.filter(x=>(x.name.toUpperCase()).includes(keyWord.toUpperCase()))
+}
   render() {
-    const dom = this.state.cinemaList.map((x) => (        
+    const dom = this.fillterCinemaList(this.state.keyWord).map((x) => (        
       <li className="CinemaItem" key={x.cinemaId}>
         <div className="left">
           <p className="cinema_name">{x.name}</p>
@@ -55,8 +58,9 @@ if (keyWord==="")
           type="text"
           placeholder="请输入影院名称"
           className="search"
-          ref={this.state.input_ref}
-          onInput={ ()=> this.handleChange(this.state.input_ref.current.value  )}
+          name="keyWord"
+          value={this.state.keyWord}
+          onChange={this.handleChange.bind(this)}
         />
         <ul>{dom}</ul>
       </div>
