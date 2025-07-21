@@ -15,6 +15,7 @@ import ReactDOM from "react-dom/client";
 // import App from "./01-base/16-props/defineProps";
 // import App from "./01-base/19-受控组件/Father";
 // import App from "./01-base/20-订阅发布设计模式/订阅发布";
-import App from "./01-base/21-context.js/context";
+// import App from "./01-base/21-context.js/context";
+import App from "./01-base/22-生命周期/email";
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<App />)
